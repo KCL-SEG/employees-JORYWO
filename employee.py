@@ -23,9 +23,9 @@ class Employee:
     def commission_info(self):
         commission_pay = ""
         if self.bonus_commission:
-            commission_pay += f" and receives a bonus commission of {self.bonus_commission}."
+            commission_pay += f" and receives a bonus commission of {self.bonus_commission}"
         elif self.contract_commission[0]:
-            commission_pay += f" and receives a commission for {self.contract_commission[0]} contract(s) at {self.contract_commission[1]}/contract."
+            commission_pay += f" and receives a commission for {self.contract_commission[0]} contract(s) at {self.contract_commission[1]}/contract"
 
         return commission_pay
 
@@ -36,10 +36,10 @@ class Employee:
             payment_info += f"monthly salary of {self.monthly_salary}"
 
         elif self.contract[0]:
-            payment_info = f"contract of {self.contract[0]} hours at {self.contract[1]}/hour"
+            payment_info += f"contract of {self.contract[0]} hours at {self.contract[1]}/hour"
 
         payment_info += self.commission_info()
-        payment_info += f"  Their total pay is {self.pay}."
+        payment_info += f".  Their total pay is {self.pay}."
         return payment_info
 
 
